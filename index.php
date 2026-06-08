@@ -9,24 +9,32 @@
         <h1 align="center">
             WEB EPEP
         </h1>
+
         <table border="1" align="center" cellspacing="0" cellpadding="10px">
             <tr>
                 <td>
-                    <a href="index.html">home</a>
+                    <a href="index.php">home</a>
                 </td>
                 <td>
-                    <a href="mahasiswa.html">profil</a>
+                    <a href="mahasiswa.php">profil</a>
                 </td>
                 <td>
                     <a href="index.kontak">kontak</a>
                 </td>
             </tr>
         </table>
-        <H2>
+
+        <h2>
             BIODATA TEKNOLOGI INFORMASI 2026
-        </H2>
-        <P>
-           ABELARE adalah seorang anak epep
-        </P>
+        </h2>
+
+         <div align="center">
+            <img src="assets/image/mbg.jpg" alt="Pemain Free Fire" width="250">
+        </div>
+
+        <p>
+            ABELARE adalah seorang anak epep
+        </p>
+
     </body>
 </html>

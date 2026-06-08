@@ -3,7 +3,7 @@
     <title>
         WEB TI UNIMUS 2026
     </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styless.css">
    </head> 
    <body>
         <p> Abelare putu utomo </p>
@@ -11,9 +11,9 @@
         <p> Teknologi Informasi </p>     
         <p> saya suka bermain epep </p>  
     <nav>
-        <a href="index.html">Beranda</a>
-        <a href="biodata.html" class="active" >Biodata</a>
-        <a href="profil.html">Tentang</a>
+        <a href="index.php">Beranda</a>
+        <a href="biodata.php" class="active" >Biodata</a>
+        <a href="profil.php">Tentang</a>
     </nav>
 </body>
 </html>

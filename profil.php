@@ -13,9 +13,9 @@
     <p> 13242520033 </p>
     <P> saya suka bermain epep </P>
     <nav>
-        <a href="index.html" class="active">Beranda</a>
-        <a href="biodata.html">Biodata</a>
-        <a href="profil.html">Tentang</a>
+        <a href="index.php" class="active">Beranda</a>
+        <a href="biodata.php">Biodata</a>
+        <a href="profil.php">Tentang</a>
     </nav>
 </body>
 </html>
