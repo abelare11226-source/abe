@@ -32,24 +32,27 @@
         <a href=" Tambahandata.php">Tambahdata</a>
         <table align="center" border="1" cellspacing="5px" cellpadding="10px">
             <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Nama</th>
-                <th rowspan="2">NIM</th>
-                <th rowspan="2">Foto</th>
-                <th colspan="3">Nilai</th>
-                <!-- <td>Baris 1, Kolom 2</td>  -->
-            </tr>
-            <tr>
-                <!-- <td>Baris 2, Kolom 1</td> -->
-                <th>UTS</th>
-                <th>UAS</th>
-                <th>Tugas</th>
-            </tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Jurusan</th>
+                <th>Email</th>
+                <th>No. HP</th>
+                <th>Foto</th>
+                <th>Aksi</th>
+            </tr>          
             <tr>
                 <td>1</td>
                 <td>Abelare Putu Utomo</td>
                 <td>13242520033</td>
-                <td><img src="assets/image/alok.jpg" alt="alok.jpg" width="200px"></td>
+                <td align= "center">Teknologi Informasi</td>
+                <td align= "center">abelare11226@gmail.com</td>
+                <td align= "center">0882005862448</td>
+                <td><img src="assets/image/alok.jpg" alt="alok.jpg" width="100px"></td>
+                <td>
+                    <a href="editdata.php"><button>Edit</button></a>
+                    <a href="deletedata.php"><button>hapus</button></a>
+                <td>
             </tr>
         </table>
         <hr>
