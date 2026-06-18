@@ -1,3 +1,31 @@
+<?php
+
+    // API
+    $koneksi = mysqli_connect("localhost", "root", "", "abeweekly");
+    
+   $query = "SELECT * FROM mahasiswa";
+
+   $result = mysqli_query ($koneksi, $query); /// lemari 
+   // isi data
+
+//    while($mhs = mysqli_fetch_object($result))
+//     {
+//         var_dump($mhs);
+//     }
+
+
+   /// ambil data (fetch) dari lemari
+   /// mysqli_fetch_row array number
+   /// mysqli_fetch_assoc 
+   /// mysqli_fetch_array
+   /// mysqli_fetch_
+   
+
+   
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,20 +68,29 @@
                 <th>No. HP</th>
                 <th>Foto</th>
                 <th>Aksi</th>
-            </tr>          
+            </tr>    
+            <?php
+            while($mhs = mysqli_fetch_assoc($result))
+            {
+            ?>
             <tr>
                 <td>1</td>
-                <td>Abelare Putu Utomo</td>
-                <td>13242520033</td>
-                <td align= "center">Teknologi Informasi</td>
-                <td align= "center">abelare11226@gmail.com</td>
-                <td align= "center">0882005862448</td>
+                <td><?php echo $mhs ["nama" ]?></td>
+                <td><?php echo $mhs ["nim" ]?></td>
+                <td align= "center"><?php echo $mhs ["jurusan"] ?></td>
+                <td align= "center"><?php echo $mhs ["email"] ?></td>
+                <td align= "center"><?php echo $mhs ["no_hp"] ?></td>
+                <td align= "center"><?php echo $mhs ["jurusan"] ?></td>
+               
                 <td><img src="assets/image/alok.jpg" alt="alok.jpg" width="100px"></td>
                 <td>
                     <a href="editdata.php"><button>Edit</button></a>
                     <a href="deletedata.php"><button>hapus</button></a>
                 <td>
             </tr>
+            <?php
+             };
+            ?>
         </table>
         <hr>
         <table align="center" border="1" cellspacing="5px" cellpadding="10px">
