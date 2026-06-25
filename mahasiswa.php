@@ -1,27 +1,10 @@
 <?php
 
-    // API
-    $koneksi = mysqli_connect("localhost", "root", "", "abeweekly");
+    require 'fungsi.php';
     
-   $query = "SELECT * FROM mahasiswa";
-
-   $result = mysqli_query ($koneksi, $query); /// lemari 
-   // isi data
-
-//    while($mhs = mysqli_fetch_object($result))
-//     {
-//         var_dump($mhs);
-//     }
-
-
-   /// ambil data (fetch) dari lemari
-   /// mysqli_fetch_row array number
-   /// mysqli_fetch_assoc 
-   /// mysqli_fetch_array
-   /// mysqli_fetch_
-   
-
-   
+   $query = "SELECT * FROM mahasiswa"; /// perintah
+   $mahasiswas = tampildata ($query); /// wadah berisi data
+  
 
 ?>
 
@@ -68,29 +51,30 @@
                 <th>No. HP</th>
                 <th>Foto</th>
                 <th>Aksi</th>
+                
             </tr>    
-            <?php
-            while($mhs = mysqli_fetch_assoc($result))
-            {
-            ?>
-            <tr>
-                <td>1</td>
-                <td><?php echo $mhs ["nama" ]?></td>
-                <td><?php echo $mhs ["nim" ]?></td>
-                <td align= "center"><?php echo $mhs ["jurusan"] ?></td>
-                <td align= "center"><?php echo $mhs ["email"] ?></td>
-                <td align= "center"><?php echo $mhs ["no_hp"] ?></td>
-                <td align= "center"><?php echo $mhs ["jurusan"] ?></td>
-               
-                <td><img src="assets/image/alok.jpg" alt="alok.jpg" width="100px"></td>
-                <td>
-                    <a href="editdata.php"><button>Edit</button></a>
-                    <a href="deletedata.php"><button>hapus</button></a>
-                <td>
-            </tr>
-            <?php
-             };
-            ?>
+           <?php $no = 1; ?>
+<?php foreach($mahasiswas as $mhs) : ?>
+<tr>
+    <td><?= $no++; ?></td>
+    <td><?= $mhs["nama"]; ?></td>
+    <td><?= $mhs["nim"]; ?></td>
+    <td><?= $mhs["jurusan"]; ?></td>
+    <td><?= $mhs["email"]; ?></td>
+    <td><?= $mhs["no_hp"]; ?></td>
+
+    <td align="center">
+        <img src="assets/image/alok.jpg"
+             alt="Foto Mahasiswa"
+             width="100">
+    </td>
+
+    <td>
+        <a href="editdata.php"><button>Edit</button></a>
+        <a href="deletedata.php"><button>Hapus</button></a>
+    </td>
+</tr>
+<?php endforeach; ?>
         </table>
         <hr>
         <table align="center" border="1" cellspacing="5px" cellpadding="10px">
